@@ -246,7 +246,7 @@
     var map;
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(-33.916583,511.32717),
+            center: new google.maps.LatLng(-33.862148,151.173705),
             zoom: 12,
             zoomControl: true,
             zoomControlOptions: {
@@ -339,15 +339,15 @@
   }
 ],
         }
-        var mapElement = document.getElementById('Map');
+        var mapElement = document.getElementById('GoogleMaps');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['Clear River IT Pty Ltd.', 'undefined', 'undefined', 'undefined', 'undefined', -33.8965493, 151.17996319999997, 'images/map-marker.png']
+['Clear River IT Pty Ltd', 'undefined', 'undefined', 'undefined', 'undefined', -33.8965493, 151.17996319999997, 'images/map-marker.png']
         ];
         for (i = 0; i < locations.length; i++) {
-            if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-            if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-            if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
            if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
            if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
             marker = new google.maps.Marker({
@@ -365,7 +365,7 @@ link = '';     }
 }
 </script>
 <style>
-    #Map {
+    #GoogleMaps {
         height:300px;
         width:1903px;
     }
@@ -382,7 +382,7 @@ link = '';     }
     }
 </style>
 
-<div id='Map'></div>
+<div id='GoogleMaps'></div>
 
     <!-- Footer -->
     <footer>
